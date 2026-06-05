@@ -49,7 +49,6 @@ function Index() {
       <Projects />
       <About />
       <Services />
-      <Process />
       <WhyUs />
       <Clients />
       <Expertise />
