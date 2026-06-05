@@ -73,30 +73,48 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Apex Structures is a premium website for ISAAC Structural Consultancy, showcasing engineering expertise with modern, award-winning design." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Apex Structures is a premium website for ISAAC Structural Consultancy, showcasing engineering expertise with modern, award-winning design." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "Apex Structures is a premium website for ISAAC Structural Consultancy, showcasing engineering expertise with modern, award-winning design." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2c4d0849-dc5b-421d-b4e7-43d13dfc6b03/id-preview-57ff775e--1b99146f-cf5c-4498-b0a3-ffaadfd036d5.lovable.app-1780677390271.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2c4d0849-dc5b-421d-b4e7-43d13dfc6b03/id-preview-57ff775e--1b99146f-cf5c-4498-b0a3-ffaadfd036d5.lovable.app-1780677390271.png" },
-    ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-    ],
-  }),
+head: () => ({
+  title: "ISAAC Structural Consultancy | Structural Engineering Experts",
+
+  meta: [
+    { charSet: "utf-8" },
+    { name: "viewport", content: "width=device-width, initial-scale=1" },
+
+    {
+      name: "description",
+      content:
+        "Apex Structures is a premium website for ISAAC Structural Consultancy, showcasing engineering expertise with modern, award-winning design.",
+    },
+
+    {
+      name: "author",
+      content: "ISAAC Structural Consultancy",
+    },
+
+    {
+      property: "og:title",
+      content: "ISAAC Structural Consultancy",
+    },
+
+    {
+      property: "og:description",
+      content:
+        "Apex Structures is a premium website for ISAAC Structural Consultancy, showcasing engineering expertise with modern, award-winning design.",
+    },
+
+    {
+      property: "og:type",
+      content: "website",
+    },
+  ],
+
+  links: [
+    {
+      rel: "stylesheet",
+      href: appCss,
+    },
+  ],
+})
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
