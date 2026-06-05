@@ -3,15 +3,15 @@ import { useRef } from "react";
 import {
   MessagesSquare,
   ClipboardCheck,
+  PencilRuler,
   HardHat,
-  PenRuler,
 } from "lucide-react";
 import { FadeUp } from "./Reveal";
 
 const steps = [
   { n: "01", icon: MessagesSquare, title: "Consultation", desc: "Understanding your vision, brief, and the constraints of the site." },
   { n: "02", icon: ClipboardCheck, title: "Analysis", desc: "Detailed site study, soil reports, and structural analysis with FEA tools." },
-  { n: "03", icon: PenRuler, title: "Design", desc: "Code-compliant drawings optimised for safety, cost, and constructability." },
+  { n: "03", icon: PencilRuler, title: "Design", desc: "Code-compliant drawings optimised for safety, cost, and constructability." },
   { n: "04", icon: HardHat, title: "Execution Support", desc: "On-site guidance through casting, fabrication, erection, and handover." },
 ];
 
