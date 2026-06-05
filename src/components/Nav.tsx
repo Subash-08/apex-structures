@@ -29,17 +29,17 @@ export function Nav() {
       transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-white/70 backdrop-blur-xl border-b border-line"
-          : "bg-transparent"
+          ? "bg-navy/75 backdrop-blur-[20px] border-b border-white/10"
+          : "bg-transparent border-b border-transparent"
       }`}
     >
       <div className="container-x flex h-20 items-center justify-between">
         <a href="#top" className="flex items-center gap-3">
-          <span className="font-display text-xl font-bold tracking-tight text-navy">
+          <span className="font-display text-xl font-bold tracking-tight text-white">
             ISAAC
           </span>
-          <span className="hidden h-6 w-px bg-line sm:block" />
-          <span className="hidden font-mono text-[10px] uppercase tracking-[0.2em] text-slate sm:block">
+          <span className="hidden h-6 w-px bg-white/20 sm:block" />
+          <span className="hidden font-mono text-[10px] uppercase tracking-[0.2em] text-white/70 sm:block">
             Structural
             <br />
             Consultancy
@@ -48,7 +48,7 @@ export function Nav() {
 
         <nav className="hidden items-center gap-9 lg:flex">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="nav-link">
+            <a key={l.href} href={l.href} className="relative text-sm font-medium text-white/85 transition-colors hover:text-white pb-1 after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-right after:scale-x-0 after:bg-white after:transition-transform after:duration-500 hover:after:origin-left hover:after:scale-x-100">
               {l.label}
             </a>
           ))}
@@ -57,14 +57,14 @@ export function Nav() {
         <div className="flex items-center gap-3">
           <a
             href="#contact"
-            className="group hidden items-center gap-2 rounded-sm bg-navy px-5 py-3 text-sm font-medium text-white transition-all duration-500 hover:bg-navy-light hover:ring-1 hover:ring-gold sm:inline-flex"
+            className="group hidden items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-medium text-navy transition-all duration-500 hover:bg-gold hover:text-white sm:inline-flex"
           >
             Contact Us
             <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover:rotate-45" />
           </a>
           <button
             onClick={() => setOpen((o) => !o)}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-line bg-white/60 backdrop-blur lg:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 backdrop-blur lg:hidden text-white hover:bg-white/20 transition-colors"
             aria-label="Menu"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}

@@ -12,8 +12,8 @@ const stats = [
 export function Stats() {
   return (
     <section className="blueprint-bg grain relative text-white">
-      <div className="container-x relative grid grid-cols-2 gap-y-12 py-20 md:grid-cols-4 md:py-24">
-        <StaggerGroup className="contents" stagger={0.12}>
+      <div className="container-x relative py-20 md:py-24">
+        <StaggerGroup className="grid grid-cols-2 gap-y-12 md:grid-cols-4" stagger={0.12}>
           {stats.map((s, i) => (
             <motion.div
               key={s.label}

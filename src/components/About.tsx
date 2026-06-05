@@ -11,7 +11,7 @@ export function About() {
           <motion.div
             initial={{ clipPath: "inset(0 0 100% 0)" }}
             whileInView={{ clipPath: "inset(0 0 0% 0)" }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "0px 0px -50px 0px" }}
             transition={{ duration: 1.3, ease: [0.22, 1, 0.36, 1] }}
             className="relative aspect-[4/5] w-full overflow-hidden"
           >

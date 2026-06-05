@@ -19,7 +19,7 @@ export function FadeUp({
       className={className}
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: true }}
       transition={{ duration: 0.9, ease, delay }}
     >
       {children}
@@ -48,7 +48,7 @@ export function StaggerGroup({
       variants={v}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, margin: "-60px" }}
+      viewport={{ once: true }}
     >
       {children}
     </motion.div>
@@ -70,8 +70,27 @@ export function WordReveal({
   delay?: number;
 }) {
   const words = text.split(" ");
+  
+  const container: Variants = {
+    hidden: {},
+    show: {
+      transition: { staggerChildren: 0.05, delayChildren: delay }
+    }
+  };
+
+  const child: Variants = {
+    hidden: { y: "110%" },
+    show: { y: "0%", transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] } }
+  };
+
   return (
-    <span className={className}>
+    <motion.span 
+      className={className}
+      variants={container}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+    >
       {words.map((w, i) => (
         <span
           key={i}
@@ -80,15 +99,12 @@ export function WordReveal({
         >
           <motion.span
             className="inline-block"
-            initial={{ y: "110%" }}
-            whileInView={{ y: "0%" }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.9, ease, delay: delay + i * 0.05 }}
+            variants={child}
           >
             {w}
           </motion.span>
         </span>
       ))}
-    </span>
+    </motion.span>
   );
 }
