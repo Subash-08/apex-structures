@@ -74,22 +74,62 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Apex Structures is a premium website for ISAAC Structural Consultancy, showcasing engineering expertise with modern, award-winning design." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Apex Structures is a premium website for ISAAC Structural Consultancy, showcasing engineering expertise with modern, award-winning design." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "Apex Structures is a premium website for ISAAC Structural Consultancy, showcasing engineering expertise with modern, award-winning design." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e95f3c92-5b0d-49c0-82a8-99870d97e429/id-preview-d3e04d04--1b99146f-cf5c-4498-b0a3-ffaadfd036d5.lovable.app-1780676968511.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e95f3c92-5b0d-49c0-82a8-99870d97e429/id-preview-d3e04d04--1b99146f-cf5c-4498-b0a3-ffaadfd036d5.lovable.app-1780676968511.png" },
-    ],
+   meta: [
+  { charset: "utf-8" },
+  { name: "viewport", content: "width=device-width, initial-scale=1" },
+
+  { title: "ISAAC Structural Consultancy | Structural Engineering Experts" },
+
+  {
+    name: "description",
+    content:
+      "ISAAC Structural Consultancy delivers structural design, analysis, project planning, and engineering solutions for residential, commercial, and industrial projects."
+  },
+
+  { name: "author", content: "ISAAC Structural Consultancy" },
+
+  {
+    property: "og:title",
+    content: "ISAAC Structural Consultancy"
+  },
+
+  {
+    property: "og:description",
+    content:
+      "Premium structural engineering consultancy specializing in design, analysis, and construction support."
+  },
+
+  {
+    property: "og:type",
+    content: "website"
+  },
+
+  {
+    property: "og:image",
+    content: "/og-image.jpg"
+  },
+
+  {
+    name: "twitter:card",
+    content: "summary_large_image"
+  },
+
+  {
+    name: "twitter:title",
+    content: "ISAAC Structural Consultancy"
+  },
+
+  {
+    name: "twitter:description",
+    content:
+      "Premium structural engineering consultancy specializing in design, analysis, and construction support."
+  },
+
+  {
+    name: "twitter:image",
+    content: "/og-image.jpg"
+  }
+],
     links: [
       {
         rel: "stylesheet",
