@@ -1,29 +1,63 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SmoothScroll } from "@/components/SmoothScroll";
+import { Nav } from "@/components/Nav";
+import { Hero } from "@/components/Hero";
+import { Stats } from "@/components/Stats";
+import { Projects } from "@/components/Projects";
+import { About } from "@/components/About";
+import { Services } from "@/components/Services";
+import { Process } from "@/components/Process";
+import { WhyUs } from "@/components/WhyUs";
+import { Clients } from "@/components/Clients";
+import { Testimonials } from "@/components/Testimonials";
+import { Expertise } from "@/components/Expertise";
+import { Insights } from "@/components/Insights";
+import { GalleryStrip } from "@/components/GalleryStrip";
+import { FinalCTA } from "@/components/FinalCTA";
+import { Footer } from "@/components/Footer";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "ISAAC Structural Consultancy — Engineering Confidence" },
+      {
+        name: "description",
+        content:
+          "Premium structural engineering for industrial, commercial, and residential developments. 25+ years, 300+ projects, 10M+ sq.ft designed across India.",
+      },
+      { property: "og:title", content: "ISAAC Structural Consultancy" },
+      {
+        property: "og:description",
+        content:
+          "Structural engineering excellence — RCC, PEB, post-tension. Chennai, India.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
     ],
+    links: [{ rel: "canonical", href: "/" }],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="relative bg-white text-navy">
+      <SmoothScroll />
+      <Nav />
+      <Hero />
+      <Stats />
+      <Projects />
+      <About />
+      <Services />
+      <Process />
+      <WhyUs />
+      <Clients />
+      <Expertise />
+      <Testimonials />
+      <Insights />
+      <GalleryStrip />
+      <FinalCTA />
+      <Footer />
+    </main>
   );
 }
