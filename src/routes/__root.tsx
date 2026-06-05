@@ -87,8 +87,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Lovable App" },
       { name: "twitter:description", content: "Apex Structures is a premium website for ISAAC Structural Consultancy, showcasing engineering expertise with modern, award-winning design." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9ed276a9-cca4-424a-ba7c-cef0690b4c33/id-preview-4120c1d5--1b99146f-cf5c-4498-b0a3-ffaadfd036d5.lovable.app-1780677204283.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9ed276a9-cca4-424a-ba7c-cef0690b4c33/id-preview-4120c1d5--1b99146f-cf5c-4498-b0a3-ffaadfd036d5.lovable.app-1780677204283.png" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2c4d0849-dc5b-421d-b4e7-43d13dfc6b03/id-preview-57ff775e--1b99146f-cf5c-4498-b0a3-ffaadfd036d5.lovable.app-1780677390271.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/2c4d0849-dc5b-421d-b4e7-43d13dfc6b03/id-preview-57ff775e--1b99146f-cf5c-4498-b0a3-ffaadfd036d5.lovable.app-1780677390271.png" },
     ],
     links: [
       {
