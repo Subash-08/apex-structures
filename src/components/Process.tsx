@@ -1,6 +1,11 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
-import { MessagesSquare, ClipboardCheck, Ruler, HardHat } from "lucide-react";
+import {
+  MessagesSquare,
+  ClipboardCheck,
+  HardHat,
+  PenRuler,
+} from "lucide-react";
 import { FadeUp } from "./Reveal";
 
 const steps = [
